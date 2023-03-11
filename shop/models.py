@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from PIL import Image
 
 
 
@@ -62,15 +61,15 @@ class Item(models.Model):
         verbose_name = 'Item'
         verbose_name_plural = 'Items'
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
 
-        img = Image.open(self.item_image.path)
+    #     img = Image.open(self.item_image.path)
 
-        if img.width != 600 and img.height != 748:
-            output_size = (600, 748)
-            img.thumbnail(output_size)
-            img.save(self.item_image.path)
+    #     if img.width != 600 and img.height != 748:
+    #         output_size = (600, 748)
+    #         img.thumbnail(output_size)
+    #         img.save(self.item_image.path)
 
 
 class Order(models.Model):
