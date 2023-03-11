@@ -168,4 +168,4 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = [    'https://mujahid-ecom.netlify.app',  ]
 
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static',),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static,')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static',)
