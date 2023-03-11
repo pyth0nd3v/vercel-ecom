@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "ECOM/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "ECOM/wsgi.py"
+      }
+    ]
+  }
