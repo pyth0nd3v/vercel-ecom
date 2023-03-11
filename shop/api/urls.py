@@ -5,7 +5,7 @@ from .views import MessageView, ItemView, CategoryWiseFilterView, PurchasingView
 
 urlpatterns = [
     
-    path('', index, basename="index"),
+    path('', index.as_view()),
     path('items/', ItemView.as_view()),
     path('items/<int:pk>/', ItemViewRetrieve.as_view()),
     path('category/', CategoryView.as_view()),

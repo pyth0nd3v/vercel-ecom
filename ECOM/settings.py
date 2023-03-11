@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-wgvzh(aavf71i^9%z8w0iiy*_4f)rhlx4no4i2fgm-4kut%)fd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', 'https://mujahid-ecom.netlify.app/', 'mujahid-ecom.netlify.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -149,7 +149,7 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_WHITELIST = [    'https://mujahid-ecom.netlify.app/', ".vercel.app", 'mujahid-ecom.netlify.app'      ]
+CORS_ORIGIN_WHITELIST = [    'https://mujahid-ecom.netlify.app', "https://vercel.app",      ]
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static', ),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static',)
