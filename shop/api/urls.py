@@ -1,11 +1,10 @@
 from django.urls import path
 from .views import MessageView, ItemView, CategoryWiseFilterView, PurchasingView, MyorderView, \
-                                ItemViewRetrieve, CategoryView, index
+                                ItemViewRetrieve, CategoryView
 
 
 urlpatterns = [
     
-    path('', index.as_view()),
     path('items/', ItemView.as_view()),
     path('items/<int:pk>/', ItemViewRetrieve.as_view()),
     path('category/', CategoryView.as_view()),

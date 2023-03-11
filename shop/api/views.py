@@ -7,7 +7,6 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import obtain_auth_token  
-from django.http import HttpResponse
 
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
@@ -16,15 +15,6 @@ from .serializers import MessageSerializer, ItemSerializer,\
                             PurchasingSerializer, OrderListSerializer, \
                                 SubCategorySerializer_category, CategorySerializer_nav
 from ..models import Message, Category, SubCategory, Item, Order
-
-
-
-class index(APIView):
-    permission_classes = [AllowAny]
-    
-    def get(self, request):
-        return HttpResponse("Hello, world. You're at the ecom index.")
-      
 
 class MessageView(APIView):
     permission_classes = [AllowAny]
